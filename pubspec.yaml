@@ -1,0 +1,41 @@
+name: mindxtalk
+description: A new Flutter application.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: # Add this line
+    sdk: flutter
+  intl: ^0.17.0
+  shared_preferences: ^2.0.5
+  get_it: ^6.0.0
+  injectable: ^1.0.4
+  flutter_bloc: ^7.0.0
+  enum_to_string: ^2.0.1
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^0.21.0-nullsafety.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  injectable_generator: ^1.0.4
+  build_runner: ^1.10.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/flares/
+#  generate: true
+flutter_intl:
+  enabled: true
+  class_name: L10n
+  main_locale: vi
+  arb_dir: assets/locales
+  output_dir: lib/l10n
