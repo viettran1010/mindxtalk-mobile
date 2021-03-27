@@ -5,6 +5,4 @@ class Constants {
 
   static const ENV_DEV = 'development';
   static const ENV_PROD = 'production';
-
-  static getAssetImage(String name) => 'assets/images/$name';
 }

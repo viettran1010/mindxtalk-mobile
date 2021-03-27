@@ -93,7 +93,7 @@ class BackgroundWidget extends StatelessWidget {
         children: [
           Positioned.fill(
               child: FittedBox(
-                  fit: BoxFit.cover, child: SvgPicture.asset(ImageAssets.appIcon))),
+                  fit: BoxFit.cover, child: SvgPicture.asset(ImageAssets.icApp))),
           Positioned(
               left: 0, right: 0, top: 0, bottom: 0, child: child ?? Container())
         ],

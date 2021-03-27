@@ -6,7 +6,7 @@ import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mindxtalk/shared/utils/utils.dart';
 
-class ImagePickerHandler {
+class ImageUtil {
   final ImagePickerListener? listener;
   final bool isCrop;
   bool isMultiple = false;
@@ -14,7 +14,7 @@ class ImagePickerHandler {
   final double? maxHeight;
   final bool isSquare;
 
-  ImagePickerHandler({
+  ImageUtil({
     this.listener,
     this.isCrop = true,
     this.isSquare = false,

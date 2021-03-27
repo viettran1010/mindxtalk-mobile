@@ -1,5 +1,7 @@
 class ImageAssets {
-  static const appIcon = 'assets/images/background.svg';
-  static const icLock = 'assets/images/ic_lock.svg';
-  static const icFaceId = 'assets/images/ic_face_id.svg';
+  static String getAssetImage(String name) => 'assets/images/$name';
+
+  static final icApp = getAssetImage('background.svg');
+  static final icLock = getAssetImage('ic_lock.svg');
+  static final icFaceId = getAssetImage('ic_face_id.svg');
 }
