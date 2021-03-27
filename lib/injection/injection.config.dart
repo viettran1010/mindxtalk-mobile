@@ -10,7 +10,7 @@ import 'package:injectable/injectable.dart' as _i2;
 import '../bloc/config/config_bloc.dart' as _i4;
 import '../repository/local_cache.dart' as _i6;
 import '../shared/environment.dart' as _i5;
-import '../shared/theme/style.dart'
+import '../shared/theme/theme.dart'
     as _i3; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars

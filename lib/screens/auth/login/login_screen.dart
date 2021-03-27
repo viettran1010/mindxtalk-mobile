@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mindxtalk/bloc/config/config_bloc.dart';
+import 'package:mindxtalk/injection/injection.dart';
 import 'package:mindxtalk/shared/shared.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -13,6 +15,10 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return BackgroundImage(
+      appBar: AppBarCustom(
+        context: context,
+        title: 'Testing',
+      ),
       resizeToAvoidBottomInset: false,
       child: Container(
         margin: EdgeInsets.only(top: 50),
@@ -93,13 +99,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     Text(
                       "Xin chào, ",
-                      style: StyleApp.titleBoldStyle(context,
+                      style: UITextStyle.titleBoldStyle(context,
                           color: Colors.white, fontSize: 20),
                     ),
                     Expanded(
                       child: Text(
                         userName.toUpperCase(),
-                        style: StyleApp.titleBoldStyle(context,
+                        style: UITextStyle.titleBoldStyle(context,
                             color: Colors.white, fontSize: 20),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
@@ -134,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
               //   onTap: () => go(context, ForgotPassword()),
               //   child: Text(
               //     S.of(context).forgot_password,
-              //     style: StyleApp.settingStyle(context,
+              //     style: UITextStyle.settingStyle(context,
               //         color: Theme.of(context).textSelectionColor),
               //   ),
               // ),
@@ -148,8 +154,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     child: Text(
                       "It's not me",
-                      style: StyleApp.settingStyle(context,
-                          color: Theme.of(context).textSelectionColor),
+                      style: UITextStyle.settingStyle(context,
+                          color: Theme.of(context).textSelectionTheme.selectionColor),
                       textAlign: TextAlign.right,
                     ),
                   ),
@@ -162,7 +168,12 @@ class _LoginScreenState extends State<LoginScreen> {
           SimpleButton(
             icon: SvgPicture.asset(ImageAssets.icLock),
             title: 'Sign in',
-            onTap: () async {},
+            onTap: () async {
+              getIt.get<ConfigBloc>().updateThemeConfig(
+                  getIt.get<AppTheme>().theme == ThemeConfig.dark
+                      ? ThemeConfig.light
+                      : ThemeConfig.dark);
+            },
           ),
           SizedBox(
             height: 10,
@@ -172,8 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
               icon: SvgPicture.asset(ImageAssets.icFaceId),
               title: 'Use FaceID',
               color: Theme.of(context).accentColor,
-              onTap: () {
-              },
+              onTap: () {},
             )
         ],
       ),
@@ -195,7 +205,7 @@ class _LoginScreenState extends State<LoginScreen> {
         onChanged: onChange,
         decoration: InputDecoration(
           labelText: hintText,
-          labelStyle: StyleApp.textFieldStyle(context,
+          labelStyle: UITextStyle.textFieldStyle(context,
               color: Color(0xFFFFFFFF).withOpacity(0.68)),
           contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
           fillColor: Color(0xFF000000).withOpacity(0.24),
@@ -215,7 +225,7 @@ class _LoginScreenState extends State<LoginScreen> {
           suffix: suffix,
           suffixIcon: suffixIcon,
         ),
-        style: StyleApp.textFieldStyle(
+        style: UITextStyle.textFieldStyle(
           context,
           color: Color(0xFFFFFFFF).withOpacity(0.68),
         ));
@@ -254,7 +264,7 @@ class SimpleButton extends StatelessWidget {
                   width: 10,
                 ),
               Text(title!,
-                  style: StyleApp.buttonStyle(context, color: Colors.white))
+                  style: UITextStyle.buttonStyle(context, color: Colors.white))
             ],
           ),
         ),

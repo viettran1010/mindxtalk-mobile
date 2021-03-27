@@ -4,3 +4,5 @@ part of 'session_bloc.dart';
 abstract class SessionState {}
 
 class InitialSessionState extends SessionState {}
+
+class SessionExpired extends SessionState {}

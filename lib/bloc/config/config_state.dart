@@ -6,13 +6,13 @@ abstract class ConfigState {}
 class InitialConfigState extends ConfigState {}
 
 class InitialConfigFetched extends ConfigState {
-  final ThemeConfig theme;
-
-  InitialConfigFetched(this.theme);
+  // final ThemeConfig theme;
+  //
+  // InitialConfigFetched(this.theme);
 }
 
 class ThemeConfigUpdated extends ConfigState {
-  final ThemeConfig theme;
-
-  ThemeConfigUpdated(this.theme);
+  // final ThemeConfig theme;
+  //
+  // ThemeConfigUpdated(this.theme);
 }

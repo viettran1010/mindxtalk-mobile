@@ -1,4 +1,5 @@
 class Constants {
+  static const APP_ID = '';
   static const APP_TITLE = 'mindxtalk';
   static const LOCALES = ['vi', 'en'];
 

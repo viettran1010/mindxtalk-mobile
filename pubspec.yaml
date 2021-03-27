@@ -9,16 +9,40 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # Utils
   flutter_localizations: # Add this line
     sdk: flutter
   intl: ^0.17.0
-  shared_preferences: ^2.0.5
+  enum_to_string: ^2.0.1
+  logger: ^1.0.0
+  share: ^2.0.1
+  webview_flutter: ^2.0.2
+  image_picker: ^0.7.3
+  multi_image_picker: ^4.8.0
+  image_cropper: ^1.4.0
+  path_provider: ^2.0.1
+  file_picker: ^3.0.0
+  another_flushbar: ^1.10.17
+  permission_handler: ^6.1.1
+  camera: ^0.8.1
+
+  # Architecture
   get_it: ^6.0.0
   injectable: ^1.0.4
   flutter_bloc: ^7.0.0
-  enum_to_string: ^2.0.1
+  shared_preferences: ^2.0.5
+
+  # Services
+  onesignal_flutter: ^2.6.3
+  url_launcher: ^6.0.3
+
+  # UI helpers
   cupertino_icons: ^1.0.2
   flutter_svg: ^0.21.0-nullsafety.0
+  animations: ^2.0.0
+  modal_bottom_sheet: ^2.0.0
+  modal_progress_hud_nsn: ^0.1.0-nullsafety-1
 
 dev_dependencies:
   flutter_test:
@@ -32,6 +56,7 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/flares/
+
 #  generate: true
 flutter_intl:
   enabled: true

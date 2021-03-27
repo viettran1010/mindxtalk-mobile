@@ -11,6 +11,8 @@ class SessionBloc extends Bloc<SessionEvent, SessionState> {
 
   @override
   Stream<SessionState> mapEventToState(SessionEvent event) async* {
-    // TODO: Add your event logic
+    if (event is TokenExpired) {
+      yield SessionExpired();
+    }
   }
 }

@@ -28,9 +28,11 @@ class ConfigBloc extends Bloc<ConfigEvent, ConfigState> {
       final ThemeConfig theme =
           EnumToString.fromString(ThemeConfig.values, data) ??
               ThemeConfig.light;
-      yield InitialConfigFetched(theme);
+      getIt.get<AppTheme>().setTheme(theme);
+      yield InitialConfigFetched();
     } else if (event is UpdateThemeConfig) {
-      yield ThemeConfigUpdated(event.theme);
+      getIt.get<AppTheme>().setTheme(event.theme);
+      yield ThemeConfigUpdated();
     }
   }
 }
