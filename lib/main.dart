@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindxtalk/injection/injection.dart';
-import 'package:mindxtalk/screens/app.dart';
+import 'file:///F:/Workspace/Github/NEW/mindxtalk/lib/app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

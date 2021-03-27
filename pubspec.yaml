@@ -17,15 +17,14 @@ dependencies:
   enum_to_string: ^2.0.1
   logger: ^1.0.0
   share: ^2.0.1
-  webview_flutter: ^2.0.2
   image_picker: ^0.7.3
   multi_image_picker: ^4.8.0
   image_cropper: ^1.4.0
   path_provider: ^2.0.1
   file_picker: ^3.0.0
-  another_flushbar: ^1.10.17
   permission_handler: ^6.1.1
   camera: ^0.8.1
+  ansicolor: ^2.0.1
 
   # Architecture
   get_it: ^6.0.0
@@ -36,6 +35,7 @@ dependencies:
   # Services
   onesignal_flutter: ^2.6.3
   url_launcher: ^6.0.3
+  dio: ^2.2.2 # Higher version incompatible with image_picker, file_picker, etc
 
   # UI helpers
   cupertino_icons: ^1.0.2
@@ -43,6 +43,8 @@ dependencies:
   animations: ^2.0.0
   modal_bottom_sheet: ^2.0.0
   modal_progress_hud_nsn: ^0.1.0-nullsafety-1
+  another_flushbar: ^1.10.17
+  webview_flutter: ^2.0.2
 
 dev_dependencies:
   flutter_test:

@@ -6,6 +6,5 @@ class Constants {
   static const ENV_DEV = 'development';
   static const ENV_PROD = 'production';
 
-  static const IMAGE_PATH = '';
-  static const LOCALE_PATH = '';
+  static getAssetImage(String name) => 'assets/images/$name';
 }

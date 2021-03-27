@@ -155,7 +155,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Text(
                       "It's not me",
                       style: UITextStyle.settingStyle(context,
-                          color: Theme.of(context).textSelectionTheme.selectionColor),
+                          color: Theme.of(context)
+                              .textSelectionTheme
+                              .selectionColor),
                       textAlign: TextAlign.right,
                     ),
                   ),
